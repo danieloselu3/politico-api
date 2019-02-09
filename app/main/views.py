@@ -1,5 +1,8 @@
-from app.main import main
+from flask import jsonify
+from . import bp
 
-@main.route('/')
+
+@bp.route('/')
 def index():
-    return "hello Dan, You can do this."
+    return jsonify({'name':'dan'})
+
