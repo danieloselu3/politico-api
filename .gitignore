@@ -1,5 +1,2 @@
-#environments
-venv
-
-#caches
-*.pyc
+#environment
+venv/
