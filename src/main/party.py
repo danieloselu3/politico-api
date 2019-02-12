@@ -46,6 +46,12 @@ def create_party():
         'message':'party successfully created'
     })
 
-
+@bp.route('/parties/<int:party_id>', methods=['GET'])
+def get_party(party_id):
+    party = [party for party in parties if party['id']==party_id]
+    return jsonify({
+        'status':200,
+        'party':party
+    })
 
 
