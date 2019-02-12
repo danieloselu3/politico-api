@@ -52,7 +52,7 @@ POST | /offices | Create a Political office
 GET | /offices/office_id | Fetch a specific office
 GET | /offices | Fetch all Political offices
 
-## Author Daniel Oselu
+#### Author Daniel Oselu
 
 
 
