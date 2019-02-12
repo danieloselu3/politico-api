@@ -7,32 +7,37 @@ Politico is a platform where politicians interact with voters.Politicians can de
 
 ## Setup and Installation
 1. Clone the repo
-    '''git
+
+    ```git
         $ git clone https://github.com/danieloselu3/politico-api.git
-    '''
+    ```
 
 2. Cd into the repo
-    '''
+
+    ```
         $ cd politico-api
-    '''
+    ```
 
 3. Activate Virtual environment
-    '''
+
+    ```
         $ virtualenv venv
         $ source venv/bin/activate
-    '''
+    ```
 
 4. Install dependencies
-    '''
+
+    ```
         $ pip install -r requirements.txt
-    '''
+    ```
 
 5. Initialize environment and run flask
-    '''python
+
+    ```python
         $ extend FLASK_APP=manage.py
         $ extend FLASK_ENV=development
         $ flask run
-    '''
+    ```
 
 ## Politico Endpoints
 
