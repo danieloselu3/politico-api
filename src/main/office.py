@@ -21,7 +21,7 @@ offices = [
 ]
 
 @bp.route('/offices', methods=['POST'])
-def get_offices():
+def create_offices():
     office = {
         'id':request.json['id'],
         'name':request.json['name'],
@@ -32,8 +32,18 @@ def get_offices():
 
     return jsonify(
         {
-            'status': 200,
+            'status': 201,
             'message':'office successfully created'
+        }
+    )
+
+@bp.route('/offices/<int:office_id>', methods=['GET'])
+def get_office(office_id):
+    office = [office for office in offices if office['id']==office_id]
+    return jsonify(
+        {
+            'status':200,
+            'office':office
         }
     )
 
