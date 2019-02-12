@@ -37,6 +37,16 @@ def create_offices():
         }
     )
 
+@bp.route('/offices/<int:office_id>', methods=['GET'])
+def get_office(office_id):
+    office = [office for office in offices if office['id']==office_id]
+    return jsonify(
+        {
+            'status':200,
+            'office':office
+        }
+    )
+
 
 
 
