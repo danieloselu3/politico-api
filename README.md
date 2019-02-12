@@ -33,7 +33,7 @@ Politico is a platform where politicians interact with voters.Politicians can de
 
 5. Initialize environment and run flask
 
-    ```python
+    ```
         $ extend FLASK_APP=manage.py
         $ extend FLASK_ENV=development
         $ flask run
