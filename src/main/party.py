@@ -1,4 +1,5 @@
 from flask import jsonify
+from flask import request
 from . import bp
 
 parties = [
@@ -31,6 +32,19 @@ def get_parties():
         }
     )
 
+@bp.route('/parties/', methods=['POST'])
+def create_party():
+    party = {
+        'id':request.json['id'],
+        'name':request.json['name'],
+        'logoUrl':request.json['name'],
+        'hqAddress':request.json['hqAddress']
+    }
+    parties.append(party)
+    return jsonify({
+        'status':201,
+        'message':'party successfully created'
+    })
 
 
 
