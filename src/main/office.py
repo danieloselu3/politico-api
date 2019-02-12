@@ -47,6 +47,14 @@ def get_office(office_id):
         }
     )
 
+@bp.route('/offices', methods=['GET'])
+def get_all_offices():
+    return jsonify(
+        {
+            'status':200,
+            'offices': offices
+        }
+    )
 
 
 
